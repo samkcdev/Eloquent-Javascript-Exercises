@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 90%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.inputs-bags {
+  margin-right: 10px;
+}
+.answer {
+  font-size: 1.5rem;
+}
