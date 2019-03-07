@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 90%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: left;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#displayNum {
+  display: flex;
+  text-align: center;
+  list-style: none;
+}
+#displayNum li {
+  flex: 1 1 0;
+}
+.even-number,
+.odd-number {
+  color: #fff;
+}
+
+.even-number {
+  background: green;
+}
+.odd-number {
+  background: mediumaquamarine;
+}
