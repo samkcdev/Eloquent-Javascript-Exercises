@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>
+      Functions In JS
+    </h1>
+    <p>
+      Function in JS is set of statements that execute a certain tasks.
+    </p>
+    <h2>Advantage of functions</h2>
+    <ul>
+      <li>Reduce repetion</li>
+      <li>Helps in structuring large programs</li>
+    </ul>
+    <h3>Defining Functions</h3>
+    <div class="blocks-container">
+      <div class="blocks">
+        <h4>Functions declarations</h4>
+        Eg:
+        <pre>
+         function square(number){
+           return number*number;
+          }
+
+          Calling the function:
+          square(30);
+          </pre
+        >
+        Here <i>number</i> is called a parameter
+      </div>
+
+      <div class="blocks">
+        <h4>Functions Expressions</h4>
+        Here it is like passing a value to a variable(binding) Eg:
+        <pre>
+        let square = function (number){
+         return number*number;
+       }
+                                      
+       square(30);
+        </pre>
+        Here <i>number</i> is called a parameter
+      </div>
+      <div class="blocks">
+        <h4>Arrow Functions</h4>
+        This is the simpler(ES6) way of defining a function
+        <pre>
+                        let square = (number) => {return number*number};
+
+                        square(40);
+                  </pre
+        >
+        Here <i>number</i> is called a parameter
+      </div>
+    </div>
+  </body>
+</html>

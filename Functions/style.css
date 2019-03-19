@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.blocks-container {
+  display: flex;
+}
+.blocks {
+  padding: 10px;
+  background: #eee;
+  margin-right: 10px;
+}
+.blocks:last-child {
+  margin-right: 0;
+}
