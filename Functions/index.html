@@ -64,6 +64,50 @@
         Here <i>number</i> is called a parameter
       </div>
     </div>
+
+    <h3>Closure In Functions</h3>
+    <p>
+      Closure is a function that is enclosed within a function, that have access
+      to the outer functions variables and scope. This closes the outer
+      functions variable within it and uses it when inner function is executed.
+      Its like the inner function captures the variables from outer function and
+      keeps it for later use.
+    </p>
+
+    <div class="block-container">
+      <div class="blocks">
+        Simple Eg for Closure that make sense to me:
+        <pre>
+            function outer(x){
+              function inner(y){
+                return x*y;
+              }
+              return inner;
+            }
+
+        </pre>
+        Calling the Function: since we can pass function as a value we can do
+        the following:
+        <pre>
+          let multiply = outer(50);
+          multiply(25);
+        </pre>
+      </div>
+      <p>
+        Solution will be:1250;<br />
+        <b>Explanation</b>: When we pass the outer function to variable multiply
+        we are calling the outer function and passing a parameter value along
+        with assigning the variable value to inner(). When we call the variable
+        multiply we call the inner function that has the outer functions value
+        of 5 and uses to get the result. So even when the outer function got
+        executed, the inner function still had the value of x and was able use
+        it get the result.
+      </p>
+      <p>
+        Inner function can also alter the outer functions variable value.
+      </p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
