@@ -34,7 +34,9 @@ pop() and unshift() return the value that has been removed from the array
 
 ////splice()
 //it can be used to both add and delete values from array
-
+//the below code removes an item from the array
+//splice takes two params
+//first is the index and second is the number of items to removed or added
 let sampleSLice = sampleArr.splice(0, 1);
 //Splice creates a new array
 console.log("After splice ", sampleSLice);
