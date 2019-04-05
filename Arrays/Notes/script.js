@@ -37,7 +37,11 @@ pop() and unshift() return the value that has been removed from the array
 //the below code removes an item from the array
 //splice takes two params
 //first is the index and second is the number of items to removed or added
-let sampleSLice = sampleArr.splice(0, 1);
+let sampleSplice = sampleArr.splice(0, 1);
 //Splice creates a new array
-console.log("After splice ", sampleSLice);
+console.log("After splice ", sampleSplice);
+console.log(sampleArr);
+let sampleSpliceAdd = sampleArr.splice(1, 0, "The God of small things");
+
+console.log("After splice ", sampleSpliceAdd);
 console.log(sampleArr);
