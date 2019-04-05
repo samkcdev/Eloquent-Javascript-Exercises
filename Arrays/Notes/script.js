@@ -32,9 +32,10 @@ console.log(sampleArr);
 pop() and unshift() return the value that has been removed from the array
 */
 
-//splice()
-
+////splice()
 //it can be used to both add and delete values from array
 
-// sampleArr.splice(0, 1);
-// console.log(sampleArr);
+let sampleSLice = sampleArr.splice(0, 1);
+//Splice creates a new array
+console.log("After splice ", sampleSLice);
+console.log(sampleArr);
