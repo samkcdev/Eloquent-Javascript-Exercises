@@ -45,3 +45,26 @@ let sampleSpliceAdd = sampleArr.splice(1, 0, "The God of small things");
 
 console.log("After splice ", sampleSpliceAdd);
 console.log(sampleArr);
+
+let inputVal = document.getElementById("inputArr");
+let val = document.getElementById("vals");
+let arr = [];
+let button = document.querySelector("button");
+let delButton = document.getElementById("popBtn");
+
+button.addEventListener("click", function() {
+  arr.unshift(inputVal.value);
+  printArr();
+  console.log(arr);
+});
+
+delButton.addEventListener("click", function() {
+  arr.pop();
+  console.log(arr);
+});
+
+function printArr() {
+  for (let i = 0; i < arr.length; i++) {
+    val.innerText += " " + "[ " + arr[i] + " ]";
+  }
+}
