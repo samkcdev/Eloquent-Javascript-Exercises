@@ -12,13 +12,14 @@ Array Methods:
 
       unshift("new array value");
 
-###splice()
+### splice()
+
 It can be used to both add and delete values from array
 splice takes two params
 -first is the index
 -second is the number of items to removed or added
 
-###slice()
+### slice()
 
 creates a copy array or we can create new sub-array from an array
 it takes two params
