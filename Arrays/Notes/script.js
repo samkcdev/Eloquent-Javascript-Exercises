@@ -46,6 +46,16 @@ let sampleSpliceAdd = sampleArr.splice(1, 0, "The God of small things");
 console.log("After splice ", sampleSpliceAdd);
 console.log(sampleArr);
 
+//slice
+//creates a copy array or we can create new sub-array from an array
+//it takes two params
+//first one is the starting index and second last index
+//the result will the new sub array from starting index and going upto last index(not including the last index)
+//but if we dont specify the last index it will start and show all the values after that
+let books = ["1984", "Animal Farm", "Randam Oozham", "Pathummade aadu"];
+let malayalamBooks = books.slice(2);
+console.log(malayalamBooks);
+
 //Testing array methods
 
 let inputVal = document.getElementById("inputArr");
