@@ -32,3 +32,5 @@ But if we dont specify the last index it will start and show all the values afte
 Joins Arrays together
 
 ### join
+
+Join method joins the elements within an array with whatever is passed as arguement. The output will be string value. This arguement passed is used usually called *delimiter*.
