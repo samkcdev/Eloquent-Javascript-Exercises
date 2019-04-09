@@ -1,6 +1,3 @@
 # Eloquent-Javascript-Exercises
 
-Notes about Arrays
-Functions with Array
--push();
--pop();
+Notes about Arrays and Exdrecises
