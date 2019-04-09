@@ -1,4 +1,4 @@
-#Notes Related to Arrays in JS from
+# Notes Related to Arrays in JS from
 
 https://www.rithmschool.com/courses/javascript/javascript-arrays-array-methods
 
@@ -24,5 +24,11 @@ splice takes two params
 creates a copy array or we can create new sub-array from an array
 it takes two params
 -first one is the starting index and second last index
-the result will the new sub array from starting index and going upto last index(not including the last index)
-But if we dont specify the last index it will start and show all the values after that
+the result will be new sub array from starting index and going upto last index(not including the last index)
+But if we dont specify the last index it will start and show all the values after that.
+
+### concat
+
+Joins Arrays together
+
+### join
