@@ -37,3 +37,16 @@ console.log(a, b);
 // Here b value has changed
 // but a value remains the same.
 //changing b value havent affected the value of a.
+//this passing by value
+//need to research more on this
+
+var arrOne = [1, 2, 3, 4];
+console.log(arrOne);
+var arrTwo = arrOne;
+console.log(arrTwo);
+arrTwo.push(5);
+console.log("arrTwo after push" + arrTwo);
+console.log("arrOne after push" + arrOne);
+
+//here any change in arrTwo affects arrOne
+//becasue arrays are just referenced not passed as value
