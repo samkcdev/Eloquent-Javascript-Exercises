@@ -2,7 +2,7 @@
 let arr = [];
 arr = ["Sam"];
 arr.push("Cherian");
-arr.unshift("Anjmal Farm is my fav Book");
+arr.unshift("Animal Farm is my fav Book");
 arr.shift(0);
 console.log(arr);
 
