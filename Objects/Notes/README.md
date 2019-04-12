@@ -1,36 +1,27 @@
-# Notes Related to Arrays in JS from
+# Notes Related to Objects in JS from
 
 https://www.rithmschool.com/courses/javascript/javascript-arrays-array-methods
 
-Array Methods:
+## Objects Basics
 
-### Add values to the end of the Array
+Objects allows us to map key to values.
 
-      push("new array value");
+eg: <pre>
 
-### Add values to the start of the Array
+var employee = {
+firstName:"Sam",
+lastName:"Cherian",
+designation:Developer
+}
 
-      unshift("new array value");
+</pre>
 
-### splice()
+We can access objects values either using the dot notation or Bracket Notation
 
-It can be used to both add and delete values from array
-splice takes two params
--first is the index
--second is the number of items to removed or added
+eg:<pre>
+employee.firstName
+result will be "Sam"
 
-### slice()
+</pre>
 
-creates a copy array or we can create new sub-array from an array
-it takes two params
--first one is the starting index and second last index
-the result will be new sub array from starting index and going upto last index(not including the last index)
-But if we dont specify the last index it will start and show all the values after that.
-
-### concat
-
-Joins Arrays together
-
-### join
-
-Join method joins the elements within an array with whatever is passed as arguement. The output will be string value. This arguement passed is used usually called *delimiter*.
+Bracket Notaion is used to access values in an array when we can't use dot notation
