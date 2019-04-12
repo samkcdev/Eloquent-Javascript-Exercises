@@ -51,4 +51,19 @@ Use Bracket Notation when:
 Use Dot notaion when:
 -we know name of the key
 -when its not a varaible and expression
-Need to research more on this topic
+<i>Need to research more on this topic</i>
+
+### Keys are always string in JS Objects.
+
+## Adding to Objects
+
+Adding properties or fuctions
+Here also use either dot(.) or [] operator
+
+<pre>
+      employee.knowsAngular = true
+</pre>
+
+## Removing from Objects
+
+delete employee.designation;
