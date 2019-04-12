@@ -53,7 +53,7 @@ Use Dot notaion when:
 -when its not a varaible and expression
 <i>Need to research more on this topic</i>
 
-### Keys are always string in JS Objects.
+<em>Keys are always string in JS Objects.</em>
 
 ## Adding to Objects
 
