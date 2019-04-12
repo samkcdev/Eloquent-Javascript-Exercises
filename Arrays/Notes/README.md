@@ -23,3 +23,5 @@ employee.firstName
 result will be "Sam"
 
 </pre>
+
+Bracket Notaion is used to access values in an array when we can't use dot notation
