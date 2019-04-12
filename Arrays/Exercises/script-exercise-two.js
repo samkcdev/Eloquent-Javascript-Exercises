@@ -48,3 +48,8 @@ people = ["Greg", "Mary", "Devon", "James"];
 var addNewPeople = people.splice(2, 1, "Elizabeth", "Artie");
 console.log(addNewPeople);
 console.log(people);
+
+// Create a new variable called withBob and set it equal to the people array concatenated with the string of "Bob".
+
+var withBob = people.concat("bob");
+console.table(withBob);
