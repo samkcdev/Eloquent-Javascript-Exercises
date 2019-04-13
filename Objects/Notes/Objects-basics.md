@@ -36,7 +36,10 @@ obj;
 </pre>
 
 when accessing
-obj.3//this will result in syntax error
+obj.3
+
+</pre>//this will result in syntax error
+
 but obj[3] will give "three";
 also obj.person will also give error.
 using obj[person] will give "This is a person"
@@ -45,13 +48,13 @@ using obj[person] will give "This is a person"
 
 <ul>
 <li> *Evaluating a expression</li>
-<li> *Pass in a varaible to get the name of the key</li>
+<li> *Pass in a variable to get the name of the key</li>
 </ul>    
       
 <b>Use Dot notaion when:</b>
 <ul>
 <li> -we know name of the key</li>
-<li> -when its not a varaible and expression</li>
+<li> -when its not a variable and expression</li>
 </ul>
 
 <i>Need to research more on this topic</i>
@@ -69,4 +72,6 @@ Here also use either dot(.) or [] operator
 
 ## Removing from Objects
 
+<pre>
 delete employee.designation;
+</pre>
