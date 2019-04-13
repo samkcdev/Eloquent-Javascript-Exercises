@@ -41,12 +41,19 @@ but obj[3] will give "three";
 also obj.person will also give error.
 using obj[person] will give "This is a person"
 
-Use Bracket Notation when:
--Evaluating a expression
--Pass in a varaible to get the name of the key
-Use Dot notaion when:
--we know name of the key
--when its not a varaible and expression
+<b>Use Bracket Notation when:</b>
+
+<ul>
+<li> *Evaluating a expression</li>
+<li> *Pass in a varaible to get the name of the key</li>
+</ul>    
+      
+<b>Use Dot notaion when:</b>
+<ul>
+<li> -we know name of the key</li>
+<li> -when its not a varaible and expression</li>
+</ul>
+
 <i>Need to research more on this topic</i>
 
 <em>Keys are always string in JS Objects.</em>
