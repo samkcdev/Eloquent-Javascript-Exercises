@@ -78,3 +78,23 @@ function singleLetterCount(word, letter) {
 }
 
 singleLetterCount("Adam", "b");
+
+//PART 2
+//multipleLetterCount
+
+//this function takes in one parameter (a string) and returns an object with the keys being the letters and the values being the count of the letter.
+
+function multipleLetterCount(wordParam) {
+  let letterObj = {};
+  for (let i = 0; i < wordParam.length; i++) {
+    console.log(wordParam[i]);
+    if (!(wordParam[i] in letterObj)) {
+      console.log((letterObj[wordParam[i]] = 1));
+    } else {
+      letterObj[wordParam[i]]++;
+    }
+  }
+  console.log(letterObj);
+}
+
+multipleLetterCount("hello");
