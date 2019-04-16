@@ -98,3 +98,36 @@ function multipleLetterCount(wordParam) {
 }
 
 multipleLetterCount("hello");
+
+//arrayManipulation
+//this function should take in at most four parameters (an array, command, location, and value).
+//If the command is "remove" and the location is "end", the function should remove the last value in the array and return the value removed. (In this case, the function only needs three arguments.)
+//If the command is "remove" and the location is "beginning", the function should remove the first value in the array and return the value removed. (In this case, the function only needs three arguments.)
+//If the command is "add" and the location is "beginning", the function should add the value (fourth parameter) to the beginning of the array and return the array.
+//If the command is "add" and the location is "end", the function should add the value (fourth parameter) to the end of the array and return the array.
+
+//arrayManipulation([1,2,3], "remove", "end"); // 3
+//arrayManipulation([1,2,3], "remove", "beginning"); // 1
+//arrayManipulation([1,2,3], "add", "beginning", 20); // [20,1,2,3]
+//arrayManipulation([1,2,3], "add", "end", 30); // [1,2,3,30]
+
+function arrayManipulation(arr, command, location, value) {
+  if (command === "remove" && location === "end") {
+    let removedValEnd = arr.pop();
+    console.log(removedValEnd);
+  } else if (command === "remove" && location === "beginning") {
+    let removedValBeginning = arr.shift();
+    console.log(removedValBeginning);
+  } else if (command === "add" && location === "beginning") {
+    arr.unshift(value);
+    console.log(arr);
+  } else if (command === "add" && location === "end") {
+    arr.push(value);
+    console.log(arr);
+  }
+}
+
+arrayManipulation([1, 2, 3], "remove", "end");
+arrayManipulation([1, 2, 3], "remove", "beginning");
+arrayManipulation([1, 2, 3], "add", "beginning", 20);
+arrayManipulation([1, 2, 3], "add", "end", 30);
