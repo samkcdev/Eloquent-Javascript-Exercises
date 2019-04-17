@@ -133,7 +133,8 @@ arrayManipulation([1, 2, 3], "add", "beginning", 20);
 arrayManipulation([1, 2, 3], "add", "end", 30);
 
 //isPalindrome
-
+//this is my solution
+//but my solution doesn't solve the issue when you have long text with spaces in it.
 function isPalindrome(str){
     let reversedStr = "";
 	for(let i=str.length-1;i>=0;i--){
@@ -147,3 +148,13 @@ function isPalindrome(str){
 }
 
 isPalindrome("Anna anna");
+//another solution is to use inbuilt JS functions
+function isPalindrome(str){
+console.log(str.toLowerCase().split("").reverse().join(""));
+if(str.toLowerCase() === str.toLowerCase().split("").reverse().join("")){
+console.log(true);
+}	
+}	
+	
+	
+}
