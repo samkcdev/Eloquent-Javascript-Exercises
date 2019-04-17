@@ -131,3 +131,20 @@ arrayManipulation([1, 2, 3], "remove", "end");
 arrayManipulation([1, 2, 3], "remove", "beginning");
 arrayManipulation([1, 2, 3], "add", "beginning", 20);
 arrayManipulation([1, 2, 3], "add", "end", 30);
+
+//isPalindrome
+
+function isPalindrome(str) {
+  let reversedString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i];
+  }
+  if (reversedString === str) {
+    console.log(true);
+    console.log(reversedString);
+  } else {
+    console.log(false);
+  }
+}
+
+isPalindrome("tacocat");
