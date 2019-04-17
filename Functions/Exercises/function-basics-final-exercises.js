@@ -134,17 +134,21 @@ arrayManipulation([1, 2, 3], "add", "end", 30);
 
 //isPalindrome
 
-function isPalindrome(str) {
-  let reversedString = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversedString += str[i];
-  }
-  if (reversedString === str) {
-    console.log(true);
-    console.log(reversedString);
-  } else {
-    console.log(false);
-  }
+function isPalindrome(str){
+    let reversedStr = "";
+
+	for(let i=str.length-1;i>=0;i--){
+		reversedStr += str[i];
+		console.log(reversedStr);
+	}
+  console.log(reversedStr.toLowerCase());
+		if(reversedStr.toLowerCase()===str.toLowerCase()){
+    	
+    	console.log(true);
+    }
+    else{
+    	console.log(false);
+    }
 }
 
-isPalindrome("tacocat");
+isPalindrome("Anna anna");
