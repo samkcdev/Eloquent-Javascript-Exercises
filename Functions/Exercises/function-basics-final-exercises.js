@@ -135,26 +135,36 @@ arrayManipulation([1, 2, 3], "add", "end", 30);
 //isPalindrome
 //this is my solution
 //but my solution doesn't solve the issue when you have long text with spaces in it.
-function isPalindrome(str){
-    let reversedStr = "";
-	for(let i=str.length-1;i>=0;i--){
-		reversedStr += str[i];
-	}
-	if(reversedStr.toLowerCase()===str.toLowerCase()){
-    }
-    else{
-    	console.log(false);
-    }
+// function isPalindrome(str) {
+//   let reversedStr = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversedStr += str[i];
+//   }
+//   if (reversedStr.toLowerCase() === str.toLowerCase()) {
+//   } else {
+//     console.log(false);
+//   }
+// }
+
+// isPalindrome("Anna anna");
+
+//another solution is to use inbuilt JS functions
+function isPalindrome(str) {
+  var re = console.log(
+    str
+      .toLowerCase()
+      .replace(/\s/g, "")
+      .split("")
+      .reverse()
+      .join("") === str.toLowerCase()
+  );
+  // console.log(str.length / 2);
+  // for (var i = 0; i < str.length / 2; i++) {
+  //   if (str[i].toLowerCase() !== str[str.length - 1 - i].toLowerCase()) {
+  //     return false;
+  //   }
+  // }
+  // console.log(true);
 }
 
-isPalindrome("Anna anna");
-//another solution is to use inbuilt JS functions
-function isPalindrome(str){
-console.log(str.toLowerCase().split("").reverse().join(""));
-if(str.toLowerCase() === str.toLowerCase().split("").reverse().join("")){
-console.log(true);
-}	
-}	
-	
-	
-}
+isPalindrome("a man a plan a canal Panama");
