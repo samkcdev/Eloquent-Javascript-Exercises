@@ -168,3 +168,5 @@ function isPalindrome(str) {
 }
 
 isPalindrome("a man a plan a canal Panama");
+
+//started last exrecise rock paper scissors
