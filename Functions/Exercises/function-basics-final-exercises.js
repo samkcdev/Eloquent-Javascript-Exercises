@@ -152,11 +152,11 @@ arrayManipulation([1, 2, 3], "add", "end", 30);
 function isPalindrome(str) {
   var re = console.log(
     str
-      .toLowerCase()
-      .replace(/\s/g, "")
-      .split("")
-      .reverse()
-      .join("") === str.toLowerCase()
+    .toLowerCase()
+    .replace(/\s/g, "")
+    .split("")
+    .reverse()
+    .join("") === str.toLowerCase()
   );
   // console.log(str.length / 2);
   // for (var i = 0; i < str.length / 2; i++) {
@@ -170,3 +170,18 @@ function isPalindrome(str) {
 isPalindrome("a man a plan a canal Panama");
 
 //started last exrecise rock paper scissors
+var userChoice = prompt("Enter", "rock,paper,scissor");
+
+function game() {
+  var gameChoices = ["rock", "paper", "scissor"];
+  for (var i = 0; i < gameChoices.length; i++) {
+    var computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+    if (userChoice === computerChoice) {
+      console.log("Both are equal")
+    }
+    break;
+    console.log(computerChoice);
+  }
+
+}
+game(userChoice);
