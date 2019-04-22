@@ -179,7 +179,6 @@ function game() {
     if (userChoice === computerChoice) {
       console.log("Both are equal")
     }
-    break;
     console.log(computerChoice);
   }
 
