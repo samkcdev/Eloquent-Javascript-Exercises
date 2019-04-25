@@ -170,6 +170,7 @@ function isPalindrome(str) {
 isPalindrome("a man a plan a canal Panama");
 
 //started last exrecise rock paper scissors
+//stuck on this
 var userChoice = prompt("Enter", "rock,paper,scissor");
 
 function game() {
