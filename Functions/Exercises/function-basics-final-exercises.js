@@ -170,18 +170,25 @@ function isPalindrome(str) {
 isPalindrome("a man a plan a canal Panama");
 
 //started last exrecise rock paper scissors
-//stuck on this
-var userChoice = prompt("Enter", "rock,paper,scissor");
-
 function game() {
+  var userChoice = prompt("Enter", "rock,paper,scissor");
   var gameChoices = ["rock", "paper", "scissor"];
   for (var i = 0; i < gameChoices.length; i++) {
     var computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
-    if (userChoice === computerChoice) {
-      console.log("Both are equal")
-    }
-    console.log(computerChoice);
+    console.log(Math.floor(Math.random() * gameChoices.length));
+    console.log(gameChoices.indexOf(computerChoice));
+    break;
+  }
+
+  if (userChoice !== computerChoice) {
+    console.log("Computer wins")
+  } else {
+    console.log("You win")
+  }
+
+  if (userChoice === computerChoice) {
+    console.log("it's a tie")
   }
 
 }
-game(userChoice);
+game();
