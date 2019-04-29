@@ -176,21 +176,21 @@ function game() {
   for (var i = 0; i < gameChoices.length; i++) {
     var computerChoice =
       gameChoices[Math.floor(Math.random() * gameChoices.length)];
-    return computerChoice;
+    break;
   }
 
   if (userChoice === computerChoice) {
     console.log("it's a tie");
   }
 
-  if (userChoice="scissor" && computerChoice="rock") {
-    console.log("Computer wins")
-  }
-  if(userChoice="paper" && computerChoice="scissor"){
-    console.log("Computer Wins");
-  }
-  if(userChoice="rock"&& computerChoice="paper"){
-    console.log("Computer Wins");
+  if (userChoice === "scissor" && computerChoice === "rock") {
+    if (userChoice === "paper" && computerChoice === "scissor") {
+      if (userChoice === "rock" && computerChoice === "paper") {
+        console.log("Computer wins");
+      }
+    }
+  } else {
+    console.log("you win");
   }
 }
 game();
