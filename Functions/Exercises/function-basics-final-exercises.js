@@ -152,11 +152,11 @@ arrayManipulation([1, 2, 3], "add", "end", 30);
 function isPalindrome(str) {
   var re = console.log(
     str
-    .toLowerCase()
-    .replace(/\s/g, "")
-    .split("")
-    .reverse()
-    .join("") === str.toLowerCase()
+      .toLowerCase()
+      .replace(/\s/g, "")
+      .split("")
+      .reverse()
+      .join("") === str.toLowerCase()
   );
   // console.log(str.length / 2);
   // for (var i = 0; i < str.length / 2; i++) {
@@ -174,21 +174,23 @@ function game() {
   var userChoice = prompt("Enter", "rock,paper,scissor");
   var gameChoices = ["rock", "paper", "scissor"];
   for (var i = 0; i < gameChoices.length; i++) {
-    var computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
-    console.log(Math.floor(Math.random() * gameChoices.length));
-    console.log(gameChoices.indexOf(computerChoice));
-    break;
-  }
-
-  if (userChoice !== computerChoice) {
-    console.log("Computer wins")
-  } else {
-    console.log("You win")
+    var computerChoice =
+      gameChoices[Math.floor(Math.random() * gameChoices.length)];
+    return computerChoice;
   }
 
   if (userChoice === computerChoice) {
-    console.log("it's a tie")
+    console.log("it's a tie");
   }
 
+  if (userChoice="scissor" && computerChoice="rock") {
+    console.log("Computer wins")
+  }
+  if(userChoice="paper" && computerChoice="scissor"){
+    console.log("Computer Wins");
+  }
+  if(userChoice="rock"&& computerChoice="paper"){
+    console.log("Computer Wins");
+  }
 }
 game();
