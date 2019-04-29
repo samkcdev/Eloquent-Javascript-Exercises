@@ -180,17 +180,26 @@ function game() {
   }
 
   if (userChoice === computerChoice) {
-    console.log("it's a tie");
+    console.log("it's a tie" + userChoice + "=" + computerChoice);
   }
 
   if (userChoice === "scissor" && computerChoice === "rock") {
-    if (userChoice === "paper" && computerChoice === "scissor") {
-      if (userChoice === "rock" && computerChoice === "paper") {
-        console.log("Computer wins");
-      }
-    }
+    console.log("Computer wins" + computerChoice);
+    return;
+  }
+  if (userChoice === "paper" && computerChoice === "scissor") {
+    console.log("Computer wins" + computerChoice);
+    return;
+  }
+  if (userChoice === "scissor" && computerChoice === "rock") {
+    console.log("Computer wins" + computerChoice);
+    return;
+  }
+  if (userChoice === "rock" && computerChoice === "paper") {
+    console.log("Computer wins" + computerChoice);
+    return;
   } else {
-    console.log("you win");
+    console.log("you win" + userChoice);
   }
 }
 game();
