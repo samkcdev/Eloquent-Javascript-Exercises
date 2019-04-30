@@ -2,7 +2,27 @@
 
 ## Common JS Errors are
 
-<b>SyntaxError</b>-occurs when we errors with out syntax
-<b>ReferenceError</b>-occurs when we try to access a variable that doesnt exist in that scope;
-<b>TypeError</b>-occurs when invoking a function that does not exist or accessing properties on undefined.
+<b>SyntaxError</b>-occurs when we write wrong JS syntax;
+<b>ReferenceError</b>-occurs when we try to access a variable that doesnt exist in that scope or access that has not been decalared;
+<b>TypeError</b>-occurs when we use builtin js types incorrectly like accessing properties on undefined or invoking something that is not a function.
 <b>RangeErrors</b>-Occurs when we use recursive function.
+
+## Catching and Throwing Errors in JS
+
+### try/catch
+
+<p>When we write a code to handle error gracefully we place code inside try block and if it throws error then it moves to catch block. </p>
+
+<pre>
+
+try{
+      thisVarnotthere;
+}
+
+catch(e){
+      console.log("error", e)
+}
+
+</pre>
+
+to show proper messages we can use throw
