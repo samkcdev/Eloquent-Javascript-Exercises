@@ -25,4 +25,10 @@ catch(e){
 
 </pre>
 
+### throw
+
 to show proper custom error messages we can use 'throw'
+
+### finally
+
+it will let to execute the code, after try and catch, regardless of the result.
