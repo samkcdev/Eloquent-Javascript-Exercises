@@ -25,4 +25,4 @@ catch(e){
 
 </pre>
 
-to show proper messages we can use throw
+to show proper custom error messages we can use 'throw'
