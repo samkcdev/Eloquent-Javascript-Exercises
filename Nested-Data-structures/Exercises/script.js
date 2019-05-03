@@ -23,4 +23,25 @@ console.log(instructorData.additionalData.moreDetails.hometown.state);
 console.log(instructorData.additionalData.moreDetails.citiesLivedIn);
 
 //Write a function called displayCities that console.logs all the values in the citiesLivedIn array:
-function displayCities() {}
+function displayCities() {
+  for (
+    var i = 0;
+    i < instructorData.additionalData.moreDetails.citiesLivedIn.length;
+    i++
+  ) {
+    console.log(instructorData.additionalData.moreDetails.citiesLivedIn[i]);
+  }
+}
+
+displayCities();
+
+//Write a function called displayHometownData that console.logs all the values inside of the hometown object
+
+function displayHometownData() {
+  var homeTownList = instructorData.additionalData.moreDetails.hometown;
+  for (key in homeTownList) {
+    console.log(homeTownList[key]);
+  }
+}
+
+displayHometownData();
