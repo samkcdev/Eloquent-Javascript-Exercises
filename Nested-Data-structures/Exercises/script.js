@@ -69,9 +69,15 @@ function revmoeDetail(keyToBeRemoved) {
     delete moredetails[keyToBeRemoved];
     console.log(keyToBeRemoved + " has been deleted");
   }
+
+  if (!(keyToBeRemoved in moredetails)) {
+    console.log(keyToBeRemoved + " does not exist");
+    return;
+  }
+
   console.log(moredetails);
 }
 
 revmoeDetail("previousApartments");
 revmoeDetail("isHilarous");
-revmoeDetail("isHilarous");
+revmoeDetail("random");
