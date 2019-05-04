@@ -45,3 +45,14 @@ function displayHometownData() {
 }
 
 displayHometownData();
+
+//write a function called addDetail that accepts two parameters, a key and a value and adds the key and value to the moreDetails object and returns the moreDetails object
+
+function addDetail(key, val) {
+  var moredetails = instructorData.additionalData.moreDetails;
+  moredetails[key] = val;
+  console.log(moredetails);
+}
+
+addDetail("isHilarous", true);
+addDetail("previousApartments", ["Mission", "North Beach", "Nob Hill"]);
