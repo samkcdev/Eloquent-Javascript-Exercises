@@ -51,8 +51,27 @@ displayHometownData();
 function addDetail(key, val) {
   var moredetails = instructorData.additionalData.moreDetails;
   moredetails[key] = val;
-  console.log(moredetails);
+  return moredetails;
+  // console.log(moredetails);
 }
 
 addDetail("isHilarous", true);
 addDetail("previousApartments", ["Mission", "North Beach", "Nob Hill"]);
+
+//let's write a function called removeDetail that removes a key in the moreDetails object and returns the moreDetails object (the new keys added above are not included in these examples).
+
+function revmoeDetail(keyToBeRemoved) {
+  var moredetails = instructorData.additionalData.moreDetails;
+  // console.log(moredetails[keyToBeRemoved]);
+  // delete moredetails[keyToBeRemoved];
+
+  if (keyToBeRemoved in moredetails) {
+    delete moredetails[keyToBeRemoved];
+    console.log(keyToBeRemoved + " has been deleted");
+  }
+  console.log(moredetails);
+}
+
+revmoeDetail("previousApartments");
+revmoeDetail("isHilarous");
+revmoeDetail("isHilarous");
