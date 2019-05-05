@@ -76,4 +76,24 @@ addSpeaker("James Bond");
 
 //Write a function addLanguage that adds a language to the languages object. The language object you add should have a key with the name of the language and the value of another object with a key of "hello" and a value of however you spell "hello" in the language you add.
 
-function addLanguage() {}
+function addLanguage(newLang, helloInLang) {
+  var langObj = nestedObject.data.languages;
+  langObj[newLang] = { hello: helloInLang };
+  console.log(langObj);
+}
+addLanguage("Malayalam", "Namaskaram");
+addLanguage("German", "Hallo");
+
+//Write a function addCountry that adds a European country to the countries object (inside of the continents object, inside of the countries object). The country you add should be an object with the key as name of the country and the value as an object with the keys of "capital" and "population" and their respective values.
+
+function addCountry(countryName, countryCapital, countryPopulation) {
+  let euObj = nestedObject.data.continents.europe.countries;
+  euObj[countryName] = {
+    capital: countryCapital,
+    population: countryPopulation
+  };
+  console.log(euObj);
+}
+
+addCountry("Germany", "Berlin", 500000);
+addCountry("France", "Paris", 1000000);
