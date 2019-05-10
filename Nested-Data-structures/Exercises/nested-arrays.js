@@ -30,3 +30,23 @@ function sumTotal() {
 }
 
 sumTotal();
+
+// Given the following array, write a function called countVowels, which returns the count of all of the vowels in each string regardless of case. To see if a value is an array, you can not use typeof since that will return 'object', so one way to do this is by using the Array.isArray function.
+
+var nestedArr = [
+  "Elie",
+  ["Matt", ["Tim"]],
+  ["Colt", ["Whisky", ["Janey"], "Tom"]],
+  "Lorien"
+];
+
+function countVowels(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      var innerVarVals = arr[i][j];
+      console.log(innerVarVals);
+    }
+  }
+}
+
+countVowels(nestedArr);
