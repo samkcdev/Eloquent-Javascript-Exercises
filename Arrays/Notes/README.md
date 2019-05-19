@@ -11,6 +11,15 @@ Array Methods:
 ### Add values to the start of the Array
 
       unshift("new array value");
+      
+NB: Adding function always returns the  length of the array after new item has been added.
+
+### Removing values from the end of an array 
+arr.pop();
+### Removing values from the start of an array
+arr.shift();
+
+NB: Deleting function in arrays always returns the removed value
 
 ### splice()
 
