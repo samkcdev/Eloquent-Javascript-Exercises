@@ -1,5 +1,5 @@
 //The below code is called a IIFE
-//it gets immedialely after its written
+//it gets executed immedialely after its written
 //dont have to invoke it separately
 var result = (function() {
   let person = "Sam";
