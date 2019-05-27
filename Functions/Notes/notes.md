@@ -1,6 +1,8 @@
 Every time a function runs we get access to special kind of keyword called arguments.
+It is not an array but array-like-objects.
 
 we can use it to know the length of arguments passed in the function
+we can also access the passed arguments through [] notation.
 
 function test(){
 arguments.length;
