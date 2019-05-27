@@ -8,7 +8,8 @@ function add(a, b) {
 function subtract(a, b) {
   return a - b;
 }
-
+//this maths function is called higher order function since it accepts
+//another function as argument.
 function maths(a, b, fn) {
   return fn(a, b);
 }
