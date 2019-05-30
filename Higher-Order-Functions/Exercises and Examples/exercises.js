@@ -36,4 +36,92 @@ function randomGame() {
   }
 }
 
-randomGame();
+// randomGame();
+
+//Write a function called isEven which takes in a number and returns true if the number is even and returns false if it is not
+
+function isEven(num) {
+  if (num % 2 === 0) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+}
+
+// isEven(5);
+
+//Odd Number
+
+function isOdd(num) {
+  if (num % 2 !== 0) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+}
+
+//Write a function called isPrime which takes in a number and returns true if the number is a prime number (is greater than 1 and can only be divided in whole by itself and 1), otherwise returns false
+
+// function isPrime(num) {
+//   if (num > 1 && num % num === 0 && num % 1 === 0) {
+//     console.log("true");
+//   } else {
+//     console.log("false");
+//   }
+// }
+
+// isPrime(8);
+
+//Write a function called numberFact which takes in a number and a callback and returns the result of the callback with the number passed to it
+
+function numberFact(num, fn) {
+  return fn(num);
+}
+
+// numberFact(6, isEven);
+// numberFact(6, isOdd);
+
+//find
+//Write a function called find. It should take in an array and a callback and return the first value found in the array that matches the condition.
+
+function find(arr, fn) {
+  for (let a = 0; a < arr.length; a++) {
+    if (fn(arr[a])) {
+      console.log(arr[a]);
+      return arr[a];
+    }
+  }
+}
+
+find([8, 11, 4, 27], function(val) {
+  return val >= 10;
+});
+
+find([8, 11, 4, 27], function(val) {
+  return val < 10;
+});
+
+//findIndex
+
+//Write a function called findIndex. It should take in an array and a callback and return the index of first value found in the array that matches the condition.
+
+function findIndex(arr, fn) {
+  for (let a = 0; a < arr.length; a++) {
+    if (fn(arr[a])) {
+      console.log(arr.indexOf(arr[a]));
+      return arr.indexOf(arr[a]);
+    }
+  }
+}
+
+findIndex([8, 11, 4, 27], function(val) {
+  return val >= 10;
+});
+
+findIndex([8, 11, 4, 27], function(val) {
+  return val < 7;
+});
+
+//specialMultiply
+
+// Write a function called specialMultiply which accepts two parameters. If the function is passed both parameters, it should return the product of the two. If the function is only passed one parameter - it should return a function which can later be passed another parameter to return the product. You will have to use closure and arguments to solve this.
