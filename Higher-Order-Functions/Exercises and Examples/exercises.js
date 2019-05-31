@@ -136,3 +136,5 @@ function specialMultiply(x, y) {
 }
 
 console.log(specialMultiply(5, 4));
+console.log(specialMultiply(5));
+console.log(specialMultiply(5)(3));
