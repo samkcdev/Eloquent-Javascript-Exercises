@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var container = document.getElementById("container");
+        container.addEventListener("click", function(event) {
+          console.log("Let's look at the event object!", event);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      Click on me!
+    </div>
+    <div onclick="alert('The handler!')">
+      <em
+        >If you click on <code>EM</code>, the handler on
+        <code>DIV</code> runs.</em
+      >
+    </div>
+
+    <form onclick="alert('form')">
+      FORM
+      <div onclick="alert('div')">
+        DIV
+        <p onclick="alert('p')">P</p>
+      </div>
+    </form>
+  </body>
+</html>
