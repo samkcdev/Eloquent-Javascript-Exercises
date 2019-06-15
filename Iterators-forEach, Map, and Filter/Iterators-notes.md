@@ -1,4 +1,4 @@
-## For each iterators
+## For each iterators-forEach()
 
 <p>
 The forEach() method executes a callback function once for each array element. 
@@ -18,3 +18,20 @@ arr.forEach(function(value, index, array) {
 });
 
 </pre>
+
+## Map - map()
+
+<p>
+map returns a new array. Syntax for map is the same as forEach and it takes the same parameters-value,index and array.
+Since it is a higher order function we can assign it to an variable and get the returned array.
+</p>
+
+## Filter-filter()
+
+So points to rememember:
+
+1. forEach processes each value with calback function-return undefined. This processed value have to be saved in some variable.
+
+2. map processes each value with callback function-returns an array, so the returned array can be assigned in an variable.
+
+3. filter processes each value only if it satisfies a condition to become true and returns an array. It is sort of a testing function.
