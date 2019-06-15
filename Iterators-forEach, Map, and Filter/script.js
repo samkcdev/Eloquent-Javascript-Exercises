@@ -20,3 +20,12 @@ addKeyAndValue(
   "isInstructor",
   true
 );
+
+let arr = [5, 6, 8];
+
+arr.forEach(function(value, index, array) {
+  console.log(value);
+  console.log(index);
+  console.log(array);
+  console.log(this);
+});
