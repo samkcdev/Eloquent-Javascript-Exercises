@@ -9,13 +9,9 @@
   <body>
     <script>
       function printFirstAndLast(arr) {
-        var newStr = "";
-        arr.forEach(function(value, index) {
-          //     newStr += value(index).slice(0, value.length - 1);
-          newStr += value;
-          console.log(value);
+        arr.forEach(element => {
+          console.log(element[0] + element[element.length - 1]);
         });
-        console.log(newStr);
       }
       printFirstAndLast(["awesome", "example", "of", "forEach"]);
     </script>
