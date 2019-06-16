@@ -43,11 +43,12 @@ filterLetters(["a", "a", "b", "c", "A"], "B"); // 1
 //Write a function called addKeyAndValue which accepts three parameters, an array (of objects), a key and a value. This function should return the array of objects after each key and value has been added. You can do this a few ways, either by reducing starting with an empty array and making copies of the object or by starting with the actual array!
 
 function addKeyAndValue(arr, key, val) {
-  arr.reduce(function(acc, next) {
+  var newObject = arr.reduce(function(acc, next) {
     next[key] = val;
     acc.push(next);
     return acc;
   }, []);
+  console.log(newObject);
 }
 
 addKeyAndValue(
@@ -55,3 +56,14 @@ addKeyAndValue(
   "isInstructor",
   true
 );
+
+var myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
+
+var orderArray = myArray.reduce(function(acc, nextVal) {
+  if (acc.indexOf(nextVal) === -1) {
+    acc.push(nextVal);
+  }
+  return acc;
+}, []);
+
+console.log(orderArray);

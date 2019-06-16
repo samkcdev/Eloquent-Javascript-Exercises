@@ -35,3 +35,17 @@ So points to rememember:
 2. map processes each value with callback function-returns an array, so the returned array can be assigned in an variable.
 
 3. filter processes each value only if it satisfies a condition to become true and returns an array. It is sort of a testing function.
+
+4. reduce-Takes four parameters. It runs a callback once through each value in the array using the following parameters:
+   accumulator
+   currentValue
+   currentIndex
+   array
+
+   There are two conditions to decide which one in accumulator and currenValue
+   Condition One:
+   If an initial value is set then the accumulator is that value and currentValue becomes first value in the array.
+   Condition Two:
+   If an initial value is not set then the accumulator is the first value in the array and currentValue becomes the second value in the array
+
+   NOTE:Always to get a returned value from a function assing that function to an variable.
