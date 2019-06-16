@@ -99,3 +99,21 @@ function filterLetters(arr, letter) {
 filterLetters(["a", "a", "b", "c", "A"], "a");
 filterLetters(["a", "a", "b", "c", "A"], "z");
 filterLetters(["a", "a", "b", "c", "A"], "B");
+
+//Write a function called filterKey which accepts two parameters, an array of objects, and the name of a key and returns an array with only those objects which have truthy values for that key:
+
+function filterKey(arrObj, key) {
+  let truthyKeys = arrObj.filter(function(elem) {
+    return elem[key] === true;
+  });
+  console.log(truthyKeys);
+}
+
+filterKey(
+  [
+    { name: "Elie", isInstructor: true, isHilarious: false },
+    { name: "Tim", isInstructor: true, isHilarious: true },
+    { name: "Matt", isInstructor: true }
+  ],
+  "isHilarious"
+);
