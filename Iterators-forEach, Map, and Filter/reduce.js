@@ -19,13 +19,14 @@ extractKey(
 //Write a function called filterLetters which accepts an array of letters and returns the number of occurrences of a specific letter. This function should be case insensitive
 
 function filterLetters(arr, letter) {
-  arr.reduce(function(acc, next) {
+  var letterCount = arr.reduce(function(acc, next) {
     if (next.toLowerCase() !== letter.toLowerCase()) {
       return acc;
     } else {
       return acc + 1;
     }
   }, 0);
+  console.log(letterCount);
 }
 
 filterLetters(["a", "a", "b", "c", "A"], "a"); // 3
@@ -67,3 +68,17 @@ var orderArray = myArray.reduce(function(acc, nextVal) {
 }, []);
 
 console.log(orderArray);
+
+var myArrayTest = [5, 4, 2, 1];
+var reduceRightVals = myArrayTest.reduceRight(function(acc, nextVal) {
+  return acc - nextVal;
+}, 5);
+
+console.log(reduceRightVals);
+
+var myArrayTest = [5, 4, 2, 1];
+var normalReduce = myArrayTest.reduce(function(acc, nextVal) {
+  return acc - nextVal;
+}, 5);
+
+console.log(normalReduce);
