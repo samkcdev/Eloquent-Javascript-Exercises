@@ -48,4 +48,17 @@ So points to rememember:
    Condition Two:
    If an initial value is not set then the accumulator is the first value in the array and currentValue becomes the second value in the array
 
-   NOTE:Always to get a returned value from a function assing that function to an variable.
+   NOTE:Always to get a returned value from a function assigning that function to an variable.
+
+   Other Array iterators are:
+
+   ### some
+
+   If ANY value passes a contiotion it returns a boolean
+
+   ### every
+
+   if ALL the value from array satisfies the condtion it returns a boolean true.
+
+   ###find
+   Added in ES2015, to find an element from an array based on condition. Will return first value in the array that stisfies a condtition(if the experssion gives true).

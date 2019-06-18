@@ -117,3 +117,20 @@ filterKey(
   ],
   "isHilarious"
 );
+
+//filter out a and move it to front of array
+
+var name = "sachina";
+var nameSplit = name.split("");
+var emptyArr = [];
+
+var filteredA = nameSplit.filter(function(val) {
+  return val === "a";
+});
+
+var newarraywithA = filteredA.forEach(function(val) {
+  nameSplit.unshift(val);
+});
+
+console.log(filteredA);
+console.log(nameSplit);
