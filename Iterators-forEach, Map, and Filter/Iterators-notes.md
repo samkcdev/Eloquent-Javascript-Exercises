@@ -54,11 +54,16 @@ So points to rememember:
 
    ### some
 
-   If ANY value passes a contiotion it returns a boolean
+   If ANY value passes a condition it returns a boolean
 
    ### every
 
-   if ALL the value from array satisfies the condtion it returns a boolean true.
+   if ALL the value from array satisfies the condition it returns a boolean true.
 
-   ###find
-   Added in ES2015, to find an element from an array based on condition. Will return first value in the array that stisfies a condtition(if the experssion gives true).
+   ### find
+
+   Added in ES2015, to find an element from an array based on condition. Will return first value in the array that satisfies a condtition(if the experssion gives true).
+
+   ### findIndex
+
+   Find the first index from an array that satisfies a condition(an expression that returns true in the callback)

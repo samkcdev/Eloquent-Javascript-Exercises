@@ -134,3 +134,20 @@ var newarraywithA = filteredA.forEach(function(val) {
 
 console.log(filteredA);
 console.log(nameSplit);
+
+//combining iterators
+
+var arrNum = [1, 2, 3, 4, 5];
+
+var finalVals = arrNum
+  .filter(function(val) {
+    return val % 2 !== 0;
+  })
+  .map(function(val) {
+    return val * 2;
+  })
+  .reduce(function(acc, currentVal) {
+    return acc + currentVal;
+  }, 0);
+
+console.log(finalVals);
