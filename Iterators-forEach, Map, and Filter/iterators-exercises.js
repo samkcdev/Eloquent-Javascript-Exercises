@@ -84,3 +84,14 @@ function printHobbies() {
 }
 
 printHobbies();
+
+// Write a function called findHometownByState which returns the first user which has a hometown of the state that is passed in
+
+function findHometownByState(userstate) {
+  var filterByState = users.find(function(val) {
+    return val.hometown.state === userstate;
+  });
+  console.log(filterByState);
+}
+
+findHometownByState("CA");
