@@ -95,3 +95,6 @@ function findHometownByState(userstate) {
 }
 
 findHometownByState("CA");
+
+//Write a function called allLanguages which returns an array of all of the unique values
+function allLanguages() {}
