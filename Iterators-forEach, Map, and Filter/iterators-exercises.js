@@ -66,10 +66,11 @@ var users = [
 
 //Write a function called printEmails which console.log's each email for the users.
 function printEmails() {
-  var userEmails = users.map(function(val) {
-    return val.email;
+  users.forEach(function(val) {
+    console.log(val.email);
   });
-  console.log(userEmails);
+
+  // console.log(userEmails);
 }
 
 printEmails();
@@ -77,10 +78,11 @@ printEmails();
 //Write a function called printHobbies which console.log's each hobby for each user.
 
 function printHobbies() {
-  var userHobby = users.find(function(val) {
-    return val.hobbies;
+  users.map(function(val) {
+    return val.hobbies.forEach(function(val) {
+      console.log(val);
+    });
   });
-  console.log(userHobby);
 }
 
 printHobbies();
