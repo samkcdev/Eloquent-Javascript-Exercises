@@ -99,4 +99,24 @@ function findHometownByState(userstate) {
 findHometownByState("CA");
 
 //Write a function called allLanguages which returns an array of all of the unique values
-function allLanguages() {}
+function allLanguages() {
+  var newLangsArr = [];
+  users.map(function(val) {
+    return val.favoriteLanguages.forEach(function(val) {
+      newLangsArr.push(val);
+    });
+  });
+
+  var uniquLangs = newLangsArr.reduce(function(acc, currentVal) {
+    if (acc.indexOf(currentVal) === -1) {
+      acc.push(currentVal);
+    }
+
+    return acc;
+  }, []);
+
+  console.log(uniquLangs);
+  return uniquLangs;
+}
+
+allLanguages();
