@@ -120,3 +120,14 @@ function allLanguages() {
 }
 
 allLanguages();
+
+//Write a function called hasFavoriteEditor which returns a boolean if any of the users have the editor passed in
+
+function hasFavoriteEditor(editor) {
+  var booleanEditor = users.some(function(val) {
+    return val.favoriteEditor === editor;
+  });
+  console.log(booleanEditor);
+}
+
+hasFavoriteEditor("Eclipse");
