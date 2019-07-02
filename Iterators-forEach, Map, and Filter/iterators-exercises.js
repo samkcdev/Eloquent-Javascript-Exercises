@@ -147,4 +147,19 @@ findByUsername("sam");
 
 //Write a function called vowelCount that accepts a string and returns an object with each key being the vowel and the value being the number of times the vowel occurs in the string (the order of keys in the object does not matter).
 
-function vowelCount() {}
+function vowelCount(string) {
+  var stringSplit = string.split("");
+  var vowels = ["a", "e", "i", "o", "u"];
+  var counter = 0;
+
+  var vowelobj = stringSplit.reduce(function(acc, nextVal) {
+    if (vowels.includes(nextVal)) {
+      acc[nextVal] = counter++;
+    }
+
+    return acc;
+  }, {});
+  console.log(vowelobj);
+}
+
+vowelCount("awesome");
