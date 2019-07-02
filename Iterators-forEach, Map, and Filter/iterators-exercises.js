@@ -131,3 +131,20 @@ function hasFavoriteEditor(editor) {
 }
 
 hasFavoriteEditor("Eclipse");
+
+//Write a function called findByUsername which takes in a string and returns an object in the users array that has that username
+function findByUsername(name) {
+  var firstuser = users.find(function(val) {
+    return val.username === name;
+  });
+  console.log(firstuser);
+  return firstuser;
+}
+
+findByUsername("sam");
+
+//PART TWO
+
+//Write a function called vowelCount that accepts a string and returns an object with each key being the vowel and the value being the number of times the vowel occurs in the string (the order of keys in the object does not matter).
+
+function vowelCount() {}
