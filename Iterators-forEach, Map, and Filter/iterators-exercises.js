@@ -162,4 +162,21 @@ function vowelCount(string) {
   console.log(vowelobj);
 }
 
-vowelCount("awesome");
+vowelCount("awesome man");
+
+//Write a function called removeVowels that accepts a string and returns an array of each character that is not a vowel (y should not count as a vowel for this function).
+
+function removeVowels(string) {
+  var stringSplit = string.split("");
+  var vowels = ["a", "e", "i", "o", "u"];
+  var vowelobj = stringSplit.reduce(function(acc, nextVal) {
+    if (vowels.includes(nextVal)) {
+      acc.push(nextVal);
+    }
+
+    return acc;
+  }, []);
+  console.log(vowelobj);
+}
+
+removeVowels("amazing");
