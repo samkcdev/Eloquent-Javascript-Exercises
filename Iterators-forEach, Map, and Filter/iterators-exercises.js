@@ -170,7 +170,7 @@ function removeVowels(string) {
   var stringSplit = string.split("");
   var vowels = ["a", "e", "i", "o", "u"];
   var vowelobj = stringSplit.reduce(function(acc, nextVal) {
-    if (vowels.includes(nextVal)) {
+    if (vowels.indexOf(nextVal) === -1) {
       acc.push(nextVal);
     }
 
@@ -180,3 +180,5 @@ function removeVowels(string) {
 }
 
 removeVowels("amazing");
+removeVowels("fun");
+removeVowels("silly");
