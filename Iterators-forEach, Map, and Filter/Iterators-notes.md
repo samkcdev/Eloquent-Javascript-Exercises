@@ -67,3 +67,10 @@ So points to rememember:
    ### findIndex
 
    Find the first index from an array that satisfies a condition(an expression that returns true in the callback)
+
+this piece of code helps to find the number of times a value appears in a array and puts it in an object
+
+var vowelobj = filteredVowels.reduce(function(acc, curVal) {
+acc[curVal] = ++acc[curVal] || 1;
+return acc;
+}, {});
