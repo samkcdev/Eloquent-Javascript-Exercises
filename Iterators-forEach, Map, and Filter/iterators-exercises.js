@@ -150,19 +150,19 @@ findByUsername("sam");
 function vowelCount(string) {
   var stringSplit = string.split("");
   var vowels = ["a", "e", "i", "o", "u"];
-  var counter = 0;
+  var filteredVowels = stringSplit.filter(function(val) {
+    return vowels.includes(val);
+  });
 
-  var vowelobj = stringSplit.reduce(function(acc, nextVal) {
-    if (vowels.includes(nextVal)) {
-      acc[nextVal] = counter++;
-    }
-
+  var vowelobj = filteredVowels.reduce(function(acc, curVal) {
+    acc[curVal] = ++acc[curVal] || 1;
     return acc;
   }, {});
-  console.log(vowelobj);
+  console.log("filteredVowels", filteredVowels);
+  console.log("vowelobj", vowelobj);
 }
 
-vowelCount("awesome man");
+vowelCount("awesome  man");
 
 //Write a function called removeVowels that accepts a string and returns an array of each character that is not a vowel (y should not count as a vowel for this function).
 
@@ -173,7 +173,6 @@ function removeVowels(string) {
     if (vowels.indexOf(nextVal) === -1) {
       acc.push(nextVal);
     }
-
     return acc;
   }, []);
   console.log(vowelobj);
