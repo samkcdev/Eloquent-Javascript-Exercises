@@ -1829,3 +1829,32 @@ function summerJamCount(songarr) {
 }
 
 summerJamCount(songs);
+
+//map
+
+//Write a function called getDurations which takes in an array of songs and returns an array of each song's duration.
+
+function getDurations(songarr) {
+  var songinDur = songarr.map(element => {
+    return element.duration;
+  });
+  console.log(songinDur);
+}
+
+getDurations(songs);
+
+//Write a function called getDurationInSeconds which takes in an array of songs and returns an array of each song's duration in seconds.
+
+function getDurationInSeconds(songarr) {
+  var songinSec = songarr.map(element => {
+    var duration = element.duration.split(":");
+    var min = +duration[0];
+    var secs = +duration[1];
+    return 60 * min + secs;
+  });
+  console.log(songinSec);
+}
+
+getDurationInSeconds(songs);
+
+//Write a function called getMainArtists which takes in an array of songs and returns an array of the primary artists on the recordings. If there's only one artist, that artist should be returned; if there are featured artists, they should be ignored (so only the artist to the left of "featuring" is kept.)
