@@ -1858,3 +1858,16 @@ function getDurationInSeconds(songarr) {
 getDurationInSeconds(songs);
 
 //Write a function called getMainArtists which takes in an array of songs and returns an array of the primary artists on the recordings. If there's only one artist, that artist should be returned; if there are featured artists, they should be ignored (so only the artist to the left of "featuring" is kept.)
+
+function getMainArtists(songArr) {
+  var songMainartist = songArr.map(songs => {
+    var splitString = songs.artist.split("featuring");
+    return splitString[0].trim();
+  });
+  console.log(songMainartist);
+}
+
+getMainArtists(songs);
+
+//Filter
+//
