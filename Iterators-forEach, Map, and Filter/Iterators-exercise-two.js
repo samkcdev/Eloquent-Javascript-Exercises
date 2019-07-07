@@ -1852,7 +1852,7 @@ function getDurationInSeconds(songarr) {
     var secs = +duration[1];
     return 60 * min + secs;
   });
-  console.log(songinSec);
+  console.log("songinSec", songinSec);
 }
 
 getDurationInSeconds(songs);
@@ -1870,4 +1870,104 @@ function getMainArtists(songArr) {
 getMainArtists(songs);
 
 //Filter
-//
+//Write a function called getBigHits which takes an array of songs and returns an array of songs which were number one for 10 or more weeks.
+
+function getBigHits(songArr) {
+  var bigHits = songArr.filter(songs => {
+    return songs.weeksAtNumberOne >= 10;
+  });
+  console.log(bigHits);
+}
+
+getBigHits(songs);
+
+//Write a function called getShortSongs which takes an array of songs and returns an array of songs which are shorter than 3 minutes.
+
+function getShortSongs(songArr) {
+  // var songInmins = songArr.duration.split(":");
+  var songLessThanThree = songArr.filter(songs => {
+    //here because of coercion the song.duration[0] which is a string is coerced into number;
+    return songs.duration[0] < 3;
+  });
+  console.log(songLessThanThree);
+}
+
+getShortSongs(songs);
+
+//Write a function called getSongsByArtist which takes in an array of songs and the name of an artist and returns an array of songs by that artist.
+
+function getSongsByArtist(songArr, artistname) {
+  var songByArtist = songArr.filter(songs => {
+    return songs.artist === artistname;
+  });
+  console.log(songByArtist);
+}
+
+getSongsByArtist(songs, "Aaliyah");
+
+function summerJamCountReduce(songarr) {
+  var reduceRefactor = songarr.reduce(function(acc, nextVal) {
+    if (nextVal.month >= 6 && nextVal.month <= 8) {
+      acc++;
+    }
+    return acc;
+  }, 0);
+  console.log(reduceRefactor);
+}
+
+summerJamCountReduce(songs);
+
+//Write a function called getTotalDurationInSeconds which takes in an array of songs and returns the total amount of time (in seconds) it would take to listen to all of the songs. (Hint: can you use anything you've written already to help solve this problem?)
+
+function getTotalDurationInSeconds(songArr) {
+  var totalDuration = songArr.reduce((acc, nextVal) => {
+    var timeSplit = nextVal.duration.split(":");
+    var mins = +timeSplit[0];
+    var secs = +timeSplit[1];
+    var durationToSecs = 60 * mins + secs;
+    return durationToSecs + acc;
+  }, 0);
+  console.log(totalDuration);
+  return totalDuration;
+}
+
+getTotalDurationInSeconds(songs);
+
+//Write a function called getSongCountByArtist which takes in an array of songs and returns an object. The keys in the object should be artist names, and the values should be the number of songs by that artist in the orignal array.
+
+function getSongCountByArtist(arr) {
+  var answer = arr.reduce((acc, nextVal) => {
+    acc[nextVal.artist] = ++acc[nextVal.artist] || 1;
+    return acc;
+  }, {});
+  console.log(answer);
+}
+
+getSongCountByArtist(songs);
+
+// function getSongCountByArtist(songArr) {
+//   var answer = songArr.reduce(function(obj, nextSong) {
+//     var artist = nextSong.artist;
+//     if (obj[artist]) {
+//       obj[artist]++;
+//     } else {
+//       obj[artist] = 1;
+//     }
+//     return obj;
+//   }, {});
+//   console.log(answer);
+// }
+
+// getSongCountByArtist(songs);
+
+//Write a function called averageWeeksAtNumberOne which takes in an array of songs and returns the average number of weeks that songs on the list were #1.
+
+function averageWeeksAtNumberOne(arr) {
+  var averageWeek =
+    arr.reduce((acc, nextVal) => {
+      return acc + nextVal.weeksAtNumberOne / 2;
+    }, 0) / arr.length;
+  console.log(averageWeek);
+}
+
+averageWeeksAtNumberOne(songs);
