@@ -20,23 +20,20 @@
 
 //Write a function called replaceWith that takes in a string, a character to replace and a character to replace it with and returns the string with the replacements. Write tests to make sure this is case sensitive
 
-// describe("replacewith", function() {
-//   it("is case sensitive", function() {
-//     expect(replaceWith("awesome", "e", "b")).toEqual("awesome", "e", "b");
-//   });
-// });
+replaceWith("awesome", "e", "B");
+
+describe("replacewith", function() {
+  it("is case sensitive", function() {
+    expect(replaceWith("awesome", "e", "b")).toEqual("awesome", "e", "B");
+  });
+});
 
 function replaceWith(string, displacedChar, newChar) {
   var splitString = string.split("");
-  //   console.log(splitString);
-  let chars = "";
   for (let i = 0; i < splitString.length; i++) {
     if (splitString[i] === displacedChar) {
-      chars += splitString.splice(0, i, newChar);
+      splitString[i] = newChar;
     }
   }
-  console.log(chars);
   console.log(splitString);
 }
-
-replaceWith("awesome", "e", "b");
