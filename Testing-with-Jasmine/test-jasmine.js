@@ -20,11 +20,9 @@
 
 //Write a function called replaceWith that takes in a string, a character to replace and a character to replace it with and returns the string with the replacements. Write tests to make sure this is case sensitive
 
-replaceWith("awesome", "e", "B");
-
 describe("replacewith", function() {
   it("is case sensitive", function() {
-    expect(replaceWith("awesome", "e", "b")).toEqual("awesome", "e", "B");
+    expect(replaceWith("Awesome", "e", "b")).toBe("awbsomb");
   });
 });
 
@@ -35,5 +33,6 @@ function replaceWith(string, displacedChar, newChar) {
       splitString[i] = newChar;
     }
   }
-  console.log(splitString);
+  var newString = splitString.join("");
+  return newString;
 }
