@@ -41,7 +41,7 @@
 
 describe("expand", function() {
   it("returns any array", function() {
-    expect(expand([1, 2, 3], 3)).toBe(jasmine.any(Array));
+    expect(expand(["fruits", "vegetables"], 4)).toEqual(jasmine.any(Array));
   });
 });
 
@@ -50,5 +50,10 @@ function expand(arr, repeatArr) {
   for (let i = 0; i < repeatArr; i++) {
     newArr.push(arr.slice(0, arr.length));
   }
-  console.log(newArr);
+  newCompleteArr = [].concat.apply([], newArr);
+  return newCompleteArr;
 }
+
+//Write a function called acceptNumbersOnly which takes in any number of arguments and returns true if all of them are numbers. Watch out for NaN - it is a typeof "number"!
+
+// function acceptNumbersOnly()
