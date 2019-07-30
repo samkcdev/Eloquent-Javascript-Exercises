@@ -56,4 +56,15 @@ function expand(arr, repeatArr) {
 
 //Write a function called acceptNumbersOnly which takes in any number of arguments and returns true if all of them are numbers. Watch out for NaN - it is a typeof "number"!
 
-// function acceptNumbersOnly()
+describe("acceptNumbersOnly", function() {
+  it("Allows only numbers", function() {
+    expect(acceptNumbersOnly(1, 223, 45)).toEqual(jasmine.any(Number));
+  });
+});
+
+function acceptNumbersOnly() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+    return typeof arguments[i] === Number;
+  }
+}
