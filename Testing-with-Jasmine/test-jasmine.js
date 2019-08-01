@@ -58,13 +58,13 @@ function expand(arr, repeatArr) {
 
 describe("acceptNumbersOnly", function() {
   it("Allows only numbers", function() {
-    expect(acceptNumbersOnly(1, 223, 45)).toEqual(jasmine.any(Number));
+    expect(acceptNumbersOnly(1, 223, 45)).toBeTruthy();
   });
 });
 
 function acceptNumbersOnly() {
   for (let i = 0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-    return typeof arguments[i] === Number;
+    console.log(typeof arguments[i] === "number");
+    return typeof arguments[i] === "number";
   }
 }
