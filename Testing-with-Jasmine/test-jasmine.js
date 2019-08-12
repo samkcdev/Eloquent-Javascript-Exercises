@@ -39,32 +39,34 @@
 
 //Write a function called expand which takes an array and a number and returns a copy of the array with as many numbers as specified
 
-describe("expand", function() {
-  it("returns any array", function() {
-    expect(expand(["fruits", "vegetables"], 4)).toEqual(jasmine.any(Array));
-  });
-});
+// describe("expand", function() {
+//   it("returns any array", function() {
+//     expect(expand(["fruits", "vegetables"], 4)).toEqual(jasmine.any(Array));
+//   });
+// });
 
-function expand(arr, repeatArr) {
-  var newArr = [];
-  for (let i = 0; i < repeatArr; i++) {
-    newArr.push(arr.slice(0, arr.length));
-  }
-  newCompleteArr = [].concat.apply([], newArr);
-  return newCompleteArr;
-}
+// function expand(arr, repeatArr) {
+//   var newArr = [];
+//   for (let i = 0; i < repeatArr; i++) {
+//     newArr.push(arr.slice(0, arr.length));
+//   }
+//   newCompleteArr = [].concat.apply([], newArr);
+//   return newCompleteArr;
+// }
 
 //Write a function called acceptNumbersOnly which takes in any number of arguments and returns true if all of them are numbers. Watch out for NaN - it is a typeof "number"!
 
 describe("acceptNumbersOnly", function() {
   it("Allows only numbers", function() {
-    expect(acceptNumbersOnly(1, 223, 45)).toBeTruthy();
+    expect(acceptNumbersOnly(1, "7", 45, 5)).toBe(true);
   });
 });
 
 function acceptNumbersOnly() {
   for (let i = 0; i < arguments.length; i++) {
-    console.log(typeof arguments[i] === "number");
-    return typeof arguments[i] === "number";
+    console.log(arguments[i]);
+    if (typeof arguments[i] === "number") {
+      return true;
+    }
   }
 }
