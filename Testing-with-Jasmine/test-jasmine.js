@@ -58,14 +58,16 @@
 
 describe("acceptNumbersOnly", function() {
   it("Allows only numbers", function() {
-    expect(acceptNumbersOnly(1, "7", 45, 5)).toBe(true);
+    expect(acceptNumbersOnly(1, "5", 45, 5)).toBe(true);
   });
 });
 
 function acceptNumbersOnly() {
-  for (let i = 0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-    if (typeof arguments[i] === "number") {
+  var args = Array.from(arguments);
+  console.log(args);
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+    if (typeof args[i] === "number") {
       return true;
     }
   }
