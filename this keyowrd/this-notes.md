@@ -53,4 +53,31 @@ animal.introduce.call(alpha);
 
 </pre>
 
-There is something called new used in constructor function.
+One of the most common use cases for call is to convert an array-like object into an actual array.
+
+Normally this what is returned from arguments an array like object
+and any normal array related methods doesnt work on it and throws up an error
+
+<pre>
+function sumArguments(){
+	return arguments;
+}
+
+sumArguments(5,8,9);
+
+<b>Result:</b>
+Arguments(3) [5, 8, 9, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+</pre>
+
+Here we can use the slice method along with call() to convert array like objects to normal array.
+
+<pre>
+function sumArgumentsCall(){
+	return [].slice.call(arguments);
+}
+
+sumArgumentsCall(4,5,6);
+
+<b>Result:</b>
+[4, 5, 6]
+</pre>
