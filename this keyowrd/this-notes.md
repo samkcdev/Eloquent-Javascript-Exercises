@@ -25,4 +25,32 @@ var whisky = {
 animal.introduce.call(whisky);
 </pre>
 
+With call() we are changing the parent of 'this' to whisky the object.
+
+here's another example of changing 'this' parent to another object
+
+<pre>
+
+var animal = {
+name:"Tiger",
+type:"wild",
+sound:"roar",
+introduce:function(){
+	return this.name + " is a " + this.type + " and says " + this.sound + "!";
+}
+}
+
+animal.introduce();
+"Tiger is a wild and says roar!"
+var alpha = {
+ name:"Alpha",
+type:"dog",
+sound:"woof"
+}
+
+animal.introduce.call(alpha);
+"Alpha is a dog and says woof!"
+
+</pre>
+
 There is something called new used in constructor function.
