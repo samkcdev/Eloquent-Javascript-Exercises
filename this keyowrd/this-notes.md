@@ -7,7 +7,7 @@ Implicit-this will take the closest object within which it is declared as its pa
 
 Explicit- this is explicitly setting the value for 'this' using functions call, bind and apply. This allows us to set the value of this whatever we want it to be.
 
-call(): takes in two parameters thisArg that is what should the this and n number of other arguments. It invokes the function immedialtely.
+call(): takes in two parameters thisArg that is what should the this be and n number of other arguments. It invokes the function immedialtely.
 Eg:
 
 <pre>
@@ -55,7 +55,7 @@ animal.introduce.call(alpha);
 
 One of the most common use cases for call is to convert an array-like object into an actual array.
 
-Normally this what is returned from arguments an array like object
+Normally this is what returned from arguments an array like object
 and any normal array related methods doesnt work on it and throws up an error
 
 <pre>
@@ -66,6 +66,7 @@ function sumArguments(){
 sumArguments(5,8,9);
 
 <b>Result:</b>
+--------------------------
 Arguments(3) [5, 8, 9, callee: ƒ, Symbol(Symbol.iterator): ƒ]
 </pre>
 
@@ -79,5 +80,6 @@ function sumArgumentsCall(){
 sumArgumentsCall(4,5,6);
 
 <b>Result:</b>
+--------------------------
 [4, 5, 6]
 </pre>
