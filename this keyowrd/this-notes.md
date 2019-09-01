@@ -131,4 +131,20 @@ muliplyByTwo(2);
 
 </pre>
 
-In the above example we giving a permanent paramater of two to the function using bind, this is called function currying where we give a preset parameter to the function.
+In the above example we are giving a permanent paramater of two to the function using bind, this is called function currying where we give a preset parameter to the function.
+
+Using new in Object constructor also changes the context of 'this'.
+
+Example:
+
+<pre>
+
+//changing context of this using new in Object constructor
+function Person(fName, lName) {
+  this.fName = fName;
+  this.lName = lName;
+}
+
+var personOne = new Person("Sam", "Cherian");
+console.log(personOne);
+</pre>

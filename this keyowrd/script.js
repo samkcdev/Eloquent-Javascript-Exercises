@@ -67,3 +67,12 @@ var secondPerson = {
 
 console.log(person.getFullName());
 console.log(person.getFullName.call(secondPerson));
+
+//changing context of this using new in Object constructor
+function Person(fName, lName) {
+  this.fName = fName;
+  this.lName = lName;
+}
+
+var personOne = new Person("Sam", "Cherian");
+console.log(personOne);
