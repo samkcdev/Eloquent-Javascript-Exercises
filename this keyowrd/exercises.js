@@ -71,5 +71,29 @@ var instructor = {
   }
 };
 
-console.log(instructor.info.data.logLocation()); // Why might we be getting an error here?
+// console.log(instructor.info.data.logLocation()); // Why might we be getting an error here?
 //we are trying to call a method logLocation on data but it doesnt exist in data.
+
+//Fix the following code:
+var obj = {
+  fullName: "Harry Potter",
+  person: {
+    sayHi: function() {
+      return "This person's name is " + this.fullName;
+    }
+  }
+};
+console.log(obj.person.sayHi.call(obj));
+
+function sumEvenArguments() {
+  var count = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] % 2 === 0) {
+      count += arguments[i];
+    }
+  }
+  console.log(count);
+  return count;
+}
+
+sumEvenArguments(1, 2);
