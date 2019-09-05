@@ -96,4 +96,20 @@ function sumEvenArguments() {
   return count;
 }
 
-sumEvenArguments(1, 2);
+// sumEvenArguments(1, 2);
+
+//converting an array like objects to array using call on slice method
+function arrayFrom(args) {
+  return [].slice.call(args);
+}
+
+function sample() {
+  var arr = arrayFrom(arguments);
+  console.log(arr);
+  if (!arr.reduce) throw "This is not an array!";
+  return arr.reduce(function(acc, next) {
+    return acc + next;
+  }, 0);
+}
+
+console.log(sample(2, 3, 5));
