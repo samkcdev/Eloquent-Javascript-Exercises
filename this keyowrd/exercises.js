@@ -140,3 +140,35 @@ console.log(addOnlyThreeTimes(1, 2));
 console.log(addOnlyThreeTimes(2, 2));
 console.log(addOnlyThreeTimes(2, 8));
 console.log(addOnlyThreeTimes(5, 6));
+
+function guessingGame(amt) {
+  let answer = Math.floor(Math.random() * 11);
+  let guesses = 0;
+  return function innerFunc(guess) {
+    guesses++;
+    if (guesses > amt) {
+      return "You're times up!";
+    }
+    if (guess === answer) {
+      return "You got it!";
+    } else if (guess > answer) {
+      return "You are too high!";
+    } else if (guess < answer) {
+      return "You are too low!";
+    }
+  };
+}
+
+var game = guessingGame(5);
+console.log(game(1));
+console.log(game(5));
+console.log(game(7));
+console.log(game(8));
+console.log(game(10));
+console.log(game(4));
+
+var game2 = guessingGame(3);
+console.log(game2(1));
+console.log(game2(5));
+console.log(game2(7));
+console.log(game2(6));
