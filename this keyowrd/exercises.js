@@ -112,4 +112,31 @@ function sample() {
   }, 0);
 }
 
-console.log(sample(2, 3, 5));
+// console.log(sample(2, 3, 5));
+
+function add(a, b) {
+  return a + b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+
+function invokeMax(fn, maxNum) {
+  let limit = maxNum;
+  let functionPassed = fn;
+  let counter = 0;
+  return function innerFunc(a, b) {
+    counter++;
+    if (counter > limit) {
+      return "Maxed out";
+    }
+    return functionPassed(a, b);
+  };
+}
+
+var addOnlyThreeTimes = invokeMax(multiply, 4);
+console.log(addOnlyThreeTimes);
+console.log(addOnlyThreeTimes(1, 2));
+console.log(addOnlyThreeTimes(2, 2));
+console.log(addOnlyThreeTimes(2, 8));
+console.log(addOnlyThreeTimes(5, 6));
