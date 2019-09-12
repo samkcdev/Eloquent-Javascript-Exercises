@@ -12,7 +12,37 @@
     <title>OOP</title>
   </head>
   <body>
+    <h3>Exercise Questions</h3>
+    1.What is the purpose of constructor function?
+
+    <div>
+      Sol: Purpose of constructor function is to act like a blueprint from which
+      we can create new instances of an object using the properties used in the
+      constructor function. eg:
+      <pre>
+          function Vehicle(make,type,year){
+            this.make=make;
+            this.type=type;
+            this.year=year;
+          }
+        //Creating new object out this constructor
+        let polo = new Vehicle("Volkswagon","Sedan",2000);
+      </pre>
+    </div>
+    What does the new keyword do?
+
+    <div>
+      Sol:the <code>new</code> keyword does 4 things: <br />
+      1:create a new object out the constructor; <br />
+      2:sets the context of <code>this</code> keyword to the newly created
+      object.<br />
+      3:sets <code>return this</code> to the constructor function, so we dont
+      have to write return in constructor function.<br />
+      4:internal link is created between the object and the
+      <code>.prototype</code> property on the constructor function. This link
+      can be accessed by using __prototype__
+    </div>
+
     <script src="script.js"></script>
-    <script src="script-exercise-two.js"></script>
   </body>
 </html>
