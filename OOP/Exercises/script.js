@@ -28,3 +28,36 @@ function MotorCycle(model, type, year, make) {
 
 ducatti = new MotorCycle("Ducatti", "Superbike", 2000, "Ducattis");
 console.table(ducatti);
+
+//Create a constructor function for a Person, each person should have a firstName, lastName, favoriteColor and favoriteNumber.
+
+function Person(firstName, lastName, favoriteColor, favoriteNumber) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.favoriteColor = favoriteColor;
+  this.favoriteNumber = favoriteNumber;
+  this.multiplyFavoriteNumber = function(number) {
+    console.log(this.favoriteNumber * number);
+  };
+}
+
+let personOne = new Person("Sam", "Cherian", "blue", 5);
+personOne.multiplyFavoriteNumber(2);
+
+//Refactor the following code so that there is no duplication inside the Child function.
+
+function Parent(firstName, lastName, favoriteColor, favoriteFood) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.favoriteColor = favoriteColor;
+  this.favoriteFood = favoriteFood;
+}
+
+function Child(firstName, lastName, favoriteColor, favoriteFood) {
+  Parent.call(this, firstName, lastName, favoriteColor, favoriteFood);
+}
+
+let parent = new Parent("Cherian", "K S", "Red", "Rice");
+let child = new Child("Sam", "Cherian", "Blue", "Rice");
+
+console.log(parent, child);
