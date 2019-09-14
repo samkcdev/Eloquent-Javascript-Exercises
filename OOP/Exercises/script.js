@@ -60,4 +60,34 @@ function Child(firstName, lastName, favoriteColor, favoriteFood) {
 let parent = new Parent("Cherian", "K S", "Red", "Rice");
 let child = new Child("Sam", "Cherian", "Blue", "Rice");
 
-console.log(parent, child);
+console.log(parent.firstName, child.firstName);
+
+console.log(Parent.prototype);
+
+//Best practices for using prototype
+
+function Books(author) {
+  this.author = author;
+  this.booksByAuthor = [];
+}
+//created two new instances from Books constructor
+var orwell = new Books("George Orwell");
+orwell.booksByAuthor.push("1984", "Animal Farm");
+
+var wodehouse = new Books("P G Wodehouse");
+wodehouse.booksByAuthor.push(
+  "Something Fresh",
+  "Pigs have wings",
+  "Bachelor Party",
+  "Psmith"
+);
+
+//adding method to books prototype
+
+Books.prototype.listAllBooks = function() {
+  console.log(`Books from ${this.author} are ${this.booksByAuthor}`);
+};
+
+//since listAllBooks() method was added to the constructor prototype is available to all the instances created from the constructor
+orwell.listAllBooks();
+wodehouse.listAllBooks();
