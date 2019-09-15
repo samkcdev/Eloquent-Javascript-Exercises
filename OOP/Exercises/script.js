@@ -82,7 +82,7 @@ wodehouse.booksByAuthor.push(
   "Psmith"
 );
 
-//adding method to books prototype
+//adding method to books prototype, which will be shared by new instances created from the Books prototype
 
 Books.prototype.listAllBooks = function() {
   console.log(`Books from ${this.author} are ${this.booksByAuthor}`);
@@ -91,3 +91,32 @@ Books.prototype.listAllBooks = function() {
 //since listAllBooks() method was added to the constructor prototype is available to all the instances created from the constructor
 orwell.listAllBooks();
 wodehouse.listAllBooks();
+
+//First big exercise on constructor function
+
+function Vehicle(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.isRunning = false;
+}
+
+Vehicle.prototype.turnOn = function() {
+  console.log((this.isRunning = true));
+};
+
+Vehicle.prototype.turnOff = function() {
+  console.log((this.isRunning = false));
+};
+
+Vehicle.prototype.honk = function() {
+  if (this.isRunning) {
+    console.log("beep");
+  }
+};
+
+let volkswagon = new Vehicle("polo", "poloSports", 2000);
+volkswagon.turnOn();
+volkswagon.honk();
+volkswagon.turnOff();
+volkswagon.honk();
