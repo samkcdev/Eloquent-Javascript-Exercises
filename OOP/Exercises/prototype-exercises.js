@@ -55,8 +55,17 @@ function FakeArrCreator(newArray) {
 }
 
 FakeArrCreator.prototype.map = function(fn) {
-  console.log(this.newArray);
+  console.log(this);
+  let newArrOutput = [];
+  for (item of this.newArray) {
+    newArrOutput.push(fn(item));
+  }
+  return newArrOutput;
 };
 
-let multiply = new FakeArrCreator([1, 2, 3]);
-console.log(multiply.map());
+let multiply = new FakeArrCreator([1, 2, 5]);
+console.log(
+  multiply.map(function(p) {
+    return p * 2;
+  })
+);
